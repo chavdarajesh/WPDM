@@ -78,7 +78,8 @@
             lblError.innerHTML = "";
             if (check_number) {
                 const number = document.getElementById('inputnumber').value;
-                window.location.href = "https://api.whatsapp.com/send?phone=+91" + number;
+                window.open("https://api.whatsapp.com/send?phone=+91" + number,'_blank');
+                document.getElementById("inputnumber").value='';
             } else {
                 lblError.innerHTML = "Invalid Mobile Number.";
                 check_number = false
